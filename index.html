@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Gabriel & Nayeli 💍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .font-elegant { font-family: 'Great Vibes', cursive; }
+        .font-main { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="font-main bg-stone-50 text-stone-800">
+    <div id="envelope-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-stone-200 transition-transform duration-1000 ease-in-out">
+        <div class="relative w-[90%] max-w-md aspect-[4/3] bg-white shadow-2xl rounded-sm flex flex-center items-center justify-center border-t-8 border-stone-300">
+        
+            <div class="text-center p-8">
+                <h2 class="font-elegant text-4xl mb-2 text-stone-600">Para nuestra familia y amigos</h2>
+                <p class="font-main text-xs tracking-widest uppercase text-stone-400">Toca el sello para abrir</p>
+                
+                <button onclick="openEnvelope()" class="mt-8 w-20 h-20 bg-red-800 rounded-full shadow-lg border-4 border-red-900 flex items-center justify-center text-white text-3xl hover:scale-110 transition-transform cursor-pointer">
+                💍
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <header class="relative h-[100vh] flex items-center justify-center text-center text-white overflow-hidden">
+        <img src="imagenes\principal2.png" 
+         id="parallax-bg"
+         class="absolute inset-0 w-full h-[120%] object-cover object-top brightness-50" 
+         alt="Hero"
+         style="top: -10%;">
+        <div class="relative z-10 px-6 max-w-3xl">
+            <h1 class="font-elegant text-7xl md:text-9xl mb-4 text-white drop-shadow-lg">
+                Gabriel & Nayeli
+            </h1>
+            
+            <p class="text-lg md:text-2xl font-light italic mb-6 drop-shadow-md leading-relaxed">
+                "Porque son parte de nuestra vida queremos que compartan con nosotros en este día tan especial."
+            </p>
+            
+            <p class="text-xl md:text-2xl tracking-[0.3em] uppercase drop-shadow-md font-bold">
+                ¡Nos Casamos!
+            </p>
+        </div>
+</header>
+
+    <section class="py-20 px-4 bg-white text-center">
+        <h2 class="font-elegant text-5xl mb-12 text-stone-600">Con la bendición de nuestros padres</h2>
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
+            <div>
+                <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padres de Nayeli</h3>
+                <p class="text-xl font-medium">Aurelio Pérez Varguez & Lourdes Magdalena Encalada Díaz</p>
+            </div>
+            <div>
+                <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padres de Gabriel</h3>
+                <p class="text-xl font-medium">Juan Gabriel Chi Moo & Lizeth Estela Chulim Ceballos</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
+            <div class="border-t border-stone-100 pt-12">
+                <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padrinos de Nayeli</h3>
+                <p class="text-3xl font-elegant text-stone-600">Sheila Guadalupe Castro Castillo.</p>
+            </div>
+             <div class="border-t border-stone-100 pt-12">
+                <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padrinos de Gabriel</h3>
+                <p class="text-3xl font-elegant text-stone-600">Álvaro Ernesto Álvarez Quijano & Maria Guadalupe Domínguez Moo</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-stone-50 text-center">
+        <h2 class="font-elegant text-5xl mb-12 text-stone-600">Dónde y Cuándo</h2>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            
+            <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-100 transition hover:shadow-md">
+                <div class="text-4xl mb-4">⛪</div>
+                <h3 class="font-elegant text-4xl mb-4">Ceremonia Religiosa</h3>
+                <p class="font-bold text-stone-500 tracking-widest mb-2 uppercase">20:15 Horas</p>
+                <p class="text-stone-700 italic mb-1">Parroquia Santo Niño de Atocha</p>
+                <p class="text-sm text-stone-400 mb-6 leading-relaxed">
+                    C. 63B, Cortés Sarmiento, 97168<br>Mérida, Yucatán.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+Santo+Niño+de+Atocha+Merida" 
+                   target="_blank" 
+                   class="inline-block bg-stone-800 text-white px-8 py-2 rounded-full text-sm font-bold hover:bg-stone-600 transition">
+                   📍 Ver Mapa
+                </a>
+            </div>
+
+            <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-100 transition hover:shadow-md">
+                <div class="text-4xl mb-4">🥂</div>
+                <h3 class="font-elegant text-4xl mb-4">Recepción</h3>
+                <p class="font-bold text-stone-500 tracking-widest mb-2 uppercase">Después de la ceremonia</p>
+                <p class="text-stone-700 italic mb-1">Sala De Fiestas Los Ceibos</p>
+                <p class="text-sm text-stone-400 mb-6 leading-relaxed">
+                    Cinco Colonias, 97280<br>Mérida, Yucatán.
+                </p>
+                <a href="https://maps.google.com/?cid=9916407458061496994&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" 
+                   target="_blank" 
+                   class="inline-block bg-stone-800 text-white px-8 py-2 rounded-full text-sm font-bold hover:bg-stone-600 transition">
+                   📍 Ver Mapa
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-stone-100">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 rounded-3xl shadow-sm text-center">
+                <div class="text-4xl mb-4">👗</div>
+                <h3 class="text-3xl font-elegant mb-2">Código de Vestimenta</h3>
+                <p class="font-bold text-stone-500 uppercase tracking-widest mb-4">Formal elegante, No color blanco, te agradecemos confirmar tu presencia</p>
+                <a href="https://forms.gle/TsUZeWUBMciTsoZS7" class="inline-block bg-stone-800 text-white px-8 py-3 rounded-full hover:bg-stone-600 transition">Confirmar Asistencia</a>
+            </div>
+            <div class="bg-white p-10 rounded-3xl shadow-sm text-center">
+                <div class="text-4xl mb-4">🎁</div>
+                <h3 class="text-3xl font-elegant mb-2 leading-tight">Tu presencia es el mejor regalo, pero si gustas dejarnos un obsequio económico:</h3>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 mt-4">
+                    <p class="text-xs text-stone-400 uppercase font-bold mb-1">CLABE</p>
+                    <div class="flex items-center justify-center gap-3">
+                        <span id="clabe" class="font-mono text-lg">012345678901234567</span>
+                        <button onclick="copyClabe()" class="p-2 bg-stone-200 rounded-lg hover:bg-stone-300">📋</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="font-elegant text-6xl text-stone-600 mb-2">Nuestra Historia</h2>
+            <p class="text-stone-400 uppercase tracking-widest text-xs">Momentos que guardamos en el corazón</p>
+        </div>
+
+            <div class="columns-2 md:columns-4 gap-6 max-w-6xl mx-auto space-y-6">
+                
+                <div class="relative group overflow-hidden rounded-2xl bg-white p-2 shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <img src="imagenes\3.jpeg" 
+                        class="rounded-xl w-full object-cover" alt="Nuestra Historia 1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl bg-white p-2 shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <img src="imagenes\4.jpeg" 
+                        class="rounded-xl w-full object-cover" alt="Nuestra Historia 2">
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl bg-white p-2 shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <img src="imagenes\5.jpeg" 
+                        class="rounded-xl w-full object-cover" alt="Nuestra Historia 3">
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl bg-white p-2 shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <img src="imagenes\7.jpeg" 
+                        class="rounded-xl w-full object-cover" alt="Nuestra Historia 4">
+                </div>
+
+        </div>
+    </section>
+
+    <footer class="py-20 bg-stone-900 text-white text-center">
+        <h2 class="font-elegant text-5xl text-center mb-8">¡Te esperamos!</h2>
+        <div id="countdown" class="flex justify-center gap-6 mb-12 text-2xl font-bold tracking-widest uppercase">
+            </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            
+            <a href="https://drive.google.com/drive/folders/15qiHtDDcGYwSEDq4un4x5U5TXsYkfdaZ?usp=sharing" class="bg-stone-700 text-white px-8 py-3 rounded-full font-bold border border-stone-600 hover:bg-stone-600 transition">📸 Subir Fotos</a>
+        </div>
+    </footer>
+
+    <script>
+        function copyClabe() {
+            navigator.clipboard.writeText(document.getElementById('clabe').innerText);
+            alert("¡CLABE copiada!");
+        }
+
+        // Actualización del Countdown para el 14 de Marzo de 2026
+        const weddingDate = new Date("2026-03-14T20:15:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
+            
+            if (diff < 0) {
+                document.getElementById("countdown").innerHTML = "¡HOY ES EL GRAN DÍA!";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById("countdown").innerHTML = `${d}d ${h}h ${m}m FALTAN`;
+        }, 1000);
+
+        window.addEventListener('scroll', function() {
+            const parallax = document.getElementById('parallax-bg');
+            let scrollPosition = window.pageYOffset;
+            // Ajusta el 0.3 para más o menos velocidad de movimiento
+            parallax.style.transform = 'translateY(' + (scrollPosition * 0.3) + 'px)';
+        });
+
+        function openEnvelope() {
+            const envelope = document.getElementById('envelope-overlay');
+            // Desliza el sobre hacia arriba y lo oculta
+            envelope.style.transform = 'translateY(-100%)';
+            
+            // Opcional: Bloquear scroll antes de abrir y activarlo después
+            document.body.style.overflow = 'auto';
+            
+            // Elimina el elemento del DOM después de la animación para no estorbar
+            setTimeout(() => {
+                envelope.style.display = 'none';
+            }, 1000);
+        }
+
+        // Bloqueamos el scroll al cargar la página para que tengan que abrir el sobre
+        document.body.style.overflow = 'hidden';
+    </script>
+</body>
+</html>
