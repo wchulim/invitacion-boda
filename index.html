@@ -11,7 +11,8 @@
         .font-main { font-family: 'Montserrat', sans-serif; }
     </style>
 </head>
-<body class="font-main bg-stone-50 text-stone-800">
+<body class="bg-[#F1F0F5] text-stone-900 font-main">
+    <audio id="musicaBoda" src="imagenes/musica.mp3" loop prealod="auto"></audio>
     <div id="envelope-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-stone-200 transition-transform duration-1000 ease-in-out">
         <div class="relative w-[90%] max-w-md aspect-[4/3] bg-white shadow-2xl rounded-sm flex flex-center items-center justify-center border-t-8 border-stone-300">
         
@@ -26,10 +27,10 @@
         </div>
     </div>
 
-    <header class="relative h-[100vh] flex items-center justify-center text-center text-white overflow-hidden">
-        <img src="imagenes\principal2.png" 
+    <header class="relative h-[140vh] flex items-center justify-center text-center text-white overflow-hidden">
+        <img src="imagenes\principal.jpg" 
          id="parallax-bg"
-         class="absolute inset-0 w-full h-[120%] object-cover object-top brightness-50" 
+         class="absolute inset-0 w-full h-[100%] object-cover object-top brightness-50" 
          alt="Hero"
          style="top: -10%;">
         <div class="relative z-10 px-6 max-w-3xl">
@@ -38,41 +39,57 @@
             </h1>
             
             <p class="text-lg md:text-2xl font-light italic mb-6 drop-shadow-md leading-relaxed">
-                "Porque son parte de nuestra vida queremos que compartan con nosotros en este día tan especial."
+                "Porque son parte de nuestra vida queremos que compartan con nosotros este día tan especial."
             </p>
             
             <p class="text-xl md:text-2xl tracking-[0.3em] uppercase drop-shadow-md font-bold">
-                ¡Nos Casamos!
+                ¡Nos vamos a Casar!
             </p>
         </div>
 </header>
 
-    <section class="py-20 px-4 bg-white text-center">
+    <section class="py-20 px-4 bg-transparent text-center">
         <h2 class="font-elegant text-5xl mb-12 text-stone-600">Con la bendición de nuestros padres</h2>
-        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
+        
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-20">
             <div>
                 <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padres de Nayeli</h3>
-                <p class="text-xl font-medium">Aurelio Pérez Varguez & Lourdes Magdalena Encalada Díaz</p>
+                <p class="text-xl font-medium text-[#5D5D5D]">Aurelio Pérez Varguez & <br>Lourdes Magdalena Encalada Díaz</p>
             </div>
             <div>
                 <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padres de Gabriel</h3>
-                <p class="text-xl font-medium">Juan Gabriel Chi Moo & Lizeth Estela Chulim Ceballos</p>
+                <p class="text-xl font-medium text-[#5D5D5D]">Juan Gabriel Chi Moo & <br>Lizeth Estela Chulim Ceballos</p>
             </div>
         </div>
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-elegant text-[#708090] mb-4">Nuestros Padrinos</h2>
+            <div class="w-24 h-px bg-[#708090] mx-auto"></div>
+        </div>
+
         <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-16">
-            <div class="border-t border-stone-100 pt-12">
-                <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padrinos de Nayeli</h3>
-                <p class="text-3xl font-elegant text-stone-600">Sheila Guadalupe Castro Castillo.</p>
+            <div class="border-t border-stone-200 pt-12">
+                <h3 class="text-xs font-bold mb-6 uppercase tracking-widest text-stone-400">Padrinos de Nayeli</h3>
+                <p class="text-3xl font-elegant text-[#5D5D5D] mb-6">Sheila Guadalupe Castro Castillo</p>
+                <p class="text-3xl font-elegant text-[#5D5D5D]">
+                    Silvia Leticia Díaz Matu & <br class="md:hidden"> Freddy Martín Cruz Domínguez
+                </p>
             </div>
-             <div class="border-t border-stone-100 pt-12">
-                <h3 class="text-xs font-bold mb-4 uppercase tracking-widest text-stone-400">Padrinos de Gabriel</h3>
-                <p class="text-3xl font-elegant text-stone-600">Álvaro Ernesto Álvarez Quijano & Maria Guadalupe Domínguez Moo</p>
+
+            <div class="border-t border-stone-200 pt-12">
+                <h3 class="text-xs font-bold mb-6 uppercase tracking-widest text-stone-400">Padrinos de Gabriel</h3>
+                <p class="text-3xl font-elegant text-[#5D5D5D] mb-6">
+                    Álvaro Ernesto Álvarez Quijano & <br class="md:hidden"> Maria Guadalupe Domínguez Moo
+                </p>
+                <p class="text-3xl font-elegant text-[#5D5D5D]">
+                    Donato del Jesús Chulim Ceballos & <br class="md:hidden"> Lenny Guadalupe Novelo Rodríguez
+                </p>
             </div>
         </div>
     </section>
 
     <section class="py-20 px-4 bg-stone-50 text-center">
-        <h2 class="font-elegant text-5xl mb-12 text-stone-600">Dónde y Cuándo</h2>
+        <h2 class="font-elegant text-5xl mb-12 text-stone-600">¿Dónde y Cuándo?</h2>
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
             
             <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-100 transition hover:shadow-md">
@@ -108,29 +125,50 @@
         </div>
     </section>
 
-    <section class="py-20 px-4 bg-stone-100">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-10 rounded-3xl shadow-sm text-center">
+   <section class="py-20 px-4 bg-stone-100">
+    <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+           <div class="bg-white p-10 rounded-3xl shadow-sm text-center border border-stone-200">
                 <div class="text-4xl mb-4">👗</div>
                 <h3 class="text-3xl font-elegant mb-2">Código de Vestimenta</h3>
-                <p class="font-bold text-stone-500 uppercase tracking-widest mb-4">Formal elegante, No color blanco, te agradecemos confirmar tu presencia</p>
-                <a href="https://forms.gle/TsUZeWUBMciTsoZS7" class="inline-block bg-stone-800 text-white px-8 py-3 rounded-full hover:bg-stone-600 transition">Confirmar Asistencia</a>
+                <p class="font-bold text-stone-500 uppercase tracking-widest mb-6">Formal elegante</p>
+                
+                <div class="bg-[#F9F5F6] border-2 border-[#D4C3C7] p-4 rounded-2xl">
+                    <p class="text-[#8B7E95] font-black uppercase tracking-[0.2em] text-sm leading-relaxed">
+                        ✨ IMPORTANTE ✨<br>
+                        <span class="text-lg block mt-1">Favor de No llevar</span>
+                        <span class="text-2xl block font-elegant normal-case text-[#708090]">color blanco</span>
+                    </p>
+                </div>
             </div>
-            <div class="bg-white p-10 rounded-3xl shadow-sm text-center">
+
+            <div class="bg-white p-10 rounded-3xl shadow-sm text-center border border-stone-200">
                 <div class="text-4xl mb-4">🎁</div>
-                <h3 class="text-3xl font-elegant mb-2 leading-tight">Tu presencia es el mejor regalo, pero si gustas dejarnos un obsequio económico:</h3>
-                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 mt-4">
-                    <p class="text-xs text-stone-400 uppercase font-bold mb-1">CLABE</p>
+                <h3 class="text-3xl font-elegant mb-2 leading-tight">Mesa de Regalos</h3>
+                <p class="text-stone-500 text-sm mb-4 italic">Tu presencia es el mejor regalo, pero si gustas dejarnos un obsequio económico, dejamos nuestra:</p>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                    <p class="text-[10px] text-stone-400 uppercase font-bold mb-1">CLABE INTERBANCARIA BBVA</p>
                     <div class="flex items-center justify-center gap-3">
-                        <span id="clabe" class="font-mono text-lg">012345678901234567</span>
-                        <button onclick="copyClabe()" class="p-2 bg-stone-200 rounded-lg hover:bg-stone-300">📋</button>
+                        <span id="clabe" class="font-mono text-base">012910015252694586</span>
+                        <button onclick="copyClabe()" class="p-2 bg-stone-200 rounded-lg hover:bg-stone-300 transition-colors">📋</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="py-20 px-4 bg-white">
+        <div class="bg-stone-800 text-white p-12 rounded-3xl shadow-xl text-center transform hover:scale-[1.02] transition-transform duration-300">
+            <h3 class="text-4xl font-elegant mb-4">¿Nos acompañas?</h3>
+            <p class="mb-8 text-stone-300 tracking-wide">Para nosotros es muy importante contar con tu presencia.</p>
+            <a href="https://forms.gle/TsUZeWUBMciTsoZS7" 
+                class="inline-block bg-[#708090] text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-[#5a6a7a] transition-all shadow-lg">
+                Confirmar Asistencia
+            </a>
+            <p class="mt-6 text-xs text-stone-400 uppercase tracking-widest">Favor de confirmar antes del 20 de Febrero</p>
+        </div>
+    </div>
+</section>
+
+    <section class="py-20 px-4 bg-transparent">
         <div class="max-w-6xl mx-auto text-center mb-12">
             <h2 class="font-elegant text-6xl text-stone-600 mb-2">Nuestra Historia</h2>
             <p class="text-stone-400 uppercase tracking-widest text-xs">Momentos que guardamos en el corazón</p>
@@ -145,12 +183,12 @@
                 </div>
 
                 <div class="relative group overflow-hidden rounded-2xl bg-white p-2 shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                    <img src="imagenes\4.jpeg" 
+                    <img src="imagenes\9.jpeg" 
                         class="rounded-xl w-full object-cover" alt="Nuestra Historia 2">
                 </div>
 
                 <div class="relative group overflow-hidden rounded-2xl bg-white p-2 shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                    <img src="imagenes\5.jpeg" 
+                    <img src="imagenes\11.jpeg" 
                         class="rounded-xl w-full object-cover" alt="Nuestra Historia 3">
                 </div>
 
@@ -202,8 +240,41 @@
             // Ajusta el 0.3 para más o menos velocidad de movimiento
             parallax.style.transform = 'translateY(' + (scrollPosition * 0.3) + 'px)';
         });
-
+        
         function openEnvelope() {
+            const envelope = document.getElementById('envelope-overlay');
+            const audio = document.getElementById('musicaBoda');
+            
+            // Configuramos el volumen inicial en 0
+            audio.volume = 0;
+            
+            // Intentamos reproducir
+            audio.play().then(() => {
+                // Efecto Fade-in: Sube el volumen gradualmente cada 200ms
+                let fadeIn = setInterval(() => {
+                    if (audio.volume < 0.9) {
+                        audio.volume += 0.1;
+                    } else {
+                        audio.volume = 1;
+                        clearInterval(fadeIn);
+                    }
+                }, 200); // Tardará 2 segundos en llegar al volumen máximo
+            }).catch(error => {
+                console.log("El navegador bloqueó el audio inicial:", error);
+            });
+
+            // Animación del sobre
+            // Desliza el sobre hacia arriba y lo oculta
+            envelope.style.transform = 'translateY(-100%)';
+            // Opcional: Bloquear scroll antes de abrir y activarlo después
+            document.body.style.overflow = 'auto';
+            // Elimina el elemento del DOM después de la animación para no estorbar
+            setTimeout(() => {
+                envelope.style.display = 'none';
+            }, 1000);
+        }
+
+    /*    function openEnvelope() {
             const envelope = document.getElementById('envelope-overlay');
             // Desliza el sobre hacia arriba y lo oculta
             envelope.style.transform = 'translateY(-100%)';
@@ -215,7 +286,7 @@
             setTimeout(() => {
                 envelope.style.display = 'none';
             }, 1000);
-        }
+        }*/
 
         // Bloqueamos el scroll al cargar la página para que tengan que abrir el sobre
         document.body.style.overflow = 'hidden';
