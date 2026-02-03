@@ -165,72 +165,74 @@
         </div>
     </section>
 
-   <section class="py-20 px-4 bg-stone-100">
-    <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-           <div class="bg-white p-10 rounded-3xl shadow-sm text-center border border-stone-200">
-                <div class="text-4xl mb-4">👗</div>
-                <h3 class="text-3xl font-elegant mb-2">Código de Vestimenta</h3>
-                <p class="font-bold text-stone-500 uppercase tracking-widest mb-6">Formal elegante</p>
+   <section class="py-20 px-4 bg-transparent">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 
-                <div class="bg-[#F9F5F6] border-2 border-[#D4C3C7] p-4 rounded-2xl">
-                    <p class="text-[#8B7E95] font-black uppercase tracking-[0.2em] text-sm leading-relaxed">
-                        ✨ IMPORTANTE ✨<br>
-                        <span class="text-lg block mt-1">Favor de No llevar</span>
-                        <span class="text-2xl block font-elegant normal-case text-[#708090]">color blanco</span>
-                    </p>
+                <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm text-center border border-stone-200 w-full box-border">
+                    <div class="text-4xl mb-4">👗</div>
+                    <h3 class="text-3xl font-elegant mb-2">Código de Vestimenta</h3>
+                    <p class="font-bold text-stone-500 uppercase tracking-widest mb-6 text-sm">Formal elegante</p>
+                    
+                    <div class="bg-[#F9F5F6] border-2 border-[#D4C3C7] p-4 rounded-2xl w-full box-border">
+                        <p class="text-[#8B7E95] font-black uppercase tracking-widest text-[10px] leading-relaxed">
+                            ✨ IMPORTANTE ✨<br>
+                            <span class="text-sm block mt-1">Favor de No llevar</span>
+                            <span class="text-xl block font-elegant normal-case text-[#708090]">color blanco</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm text-center border border-stone-200 w-full box-border">
+                    <div class="text-4xl mb-4">🎁</div>
+                    <h3 class="text-3xl font-elegant mb-2 leading-tight">Mesa de Regalos</h3>
+                    <p class="text-stone-500 text-xs mb-4 italic px-2">Tu presencia es el mejor regalo, pero si gustas dejarnos un obsequio económico, te dejamos nuestra:</p>
+                    
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 w-full box-border overflow-hidden">
+                        <p class="text-[10px] text-stone-400 uppercase font-bold mb-1">CLABE INTERBANCARIA BBVA</p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-2">
+                            <span id="clabe" class="font-mono text-[13px] sm:text-base break-all">012910015252694586</span>
+                            <button onclick="copyClabe()" class="p-2 bg-stone-200 rounded-lg hover:bg-stone-300 transition-colors">📋</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="bg-white p-10 rounded-3xl shadow-sm text-center border border-stone-200">
-                <div class="text-4xl mb-4">🎁</div>
-                <h3 class="text-3xl font-elegant mb-2 leading-tight">Mesa de Regalos</h3>
-                <p class="text-stone-500 text-sm mb-4 italic">Tu presencia es el mejor regalo, pero si gustas dejarnos un obsequio económico, dejamos nuestra:</p>
-                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
-                    <p class="text-[10px] text-stone-400 uppercase font-bold mb-1">CLABE INTERBANCARIA BBVA</p>
-                    <div class="flex items-center justify-center gap-3">
-                        <span id="clabe" class="font-mono text-base">012910015252694586</span>
-                        <button onclick="copyClabe()" class="p-2 bg-stone-200 rounded-lg hover:bg-stone-300 transition-colors">📋</button>
+            <div class="bg-stone-800 text-white p-8 md:p-12 rounded-3xl shadow-xl text-center w-full box-border">
+                <h3 class="text-3xl md:text-4xl font-elegant mb-4">¿Nos acompañas?</h3>
+                <p class="mb-8 text-stone-300 tracking-wide text-sm px-4">Para nosotros es muy importante contar con tu presencia.</p>
+                
+                <div id="pases-container" class="hidden w-full max-w-[90%] md:max-w-sm mx-auto my-16 transition-all duration-500">
+                    <div class="ticket-shape p-6 md:p-8 shadow-xl text-center border-2 border-[#708090]/20">
+                        
+                        <div class="text-[#708090] text-2xl mb-2 font-elegant">G & N</div>
+                        <div class="w-full border-b border-stone-100 mb-4"></div>
+                        
+                        <p class="font-main text-stone-500 text-[10px] uppercase tracking-widest mb-1">Invitado Especial</p>
+                        <h4 id="guest-name" class="font-elegant text-4xl text-[#708090] mb-4 break-words">Nombre</h4>
+                        
+                        <div class="bg-[#F1F0F5] py-4 rounded-lg border-y-2 border-white shadow-inner">
+                            <p class="text-stone-500 text-[10px] uppercase tracking-[0.2em] mb-1">Pases Reservados</p>
+                            <span id="guest-passes" class="text-6xl font-elegant text-[#5a6a7a] drop-shadow-sm">0</span>
+                            <p class="text-[#708090] text-xs font-bold uppercase tracking-widest mt-1">Personas</p>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="https://forms.gle/TsUZeWUBMciTsoZS7" 
+                            target="_blank"
+                            class="inline-block w-full bg-[#708090] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-[#5a6a7a] transition-all shadow-md text-sm">
+                            Confirmar Asistencia
+                            </a>
+                        </div>
+
+                        <p class="mt-4 text-[10px] text-stone-400 uppercase tracking-widest italic leading-tight">
+                            Favor de confirmar antes del <br> 20 de Febrero
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="bg-stone-800 text-white p-12 rounded-3xl shadow-xl text-center transform hover:scale-[1.02] transition-transform duration-300">
-            <h3 class="text-4xl font-elegant mb-4">¿Nos acompañas?</h3>
-            <p class="mb-8 text-stone-300 tracking-wide">Para nosotros es muy importante contar con tu presencia.</p>
-            <div id="pases-container" class="hidden w-full max-w-[90%] md:max-w-sm mx-auto my-16 transition-all duration-500">
-                <div class="ticket-shape p-6 md:p-8 shadow-xl text-center border-2 border-[#708090]/20">
-                    
-                    <div class="text-[#708090] text-2xl mb-2 font-elegant">G & N</div>
-                    <div class="w-full border-b border-stone-100 mb-4"></div>
-                    
-                    <p class="font-main text-stone-500 text-sm uppercase tracking-widest mb-1">Invitado Especial</p>
-                    <h4 id="guest-name" class="font-elegant text-4xl text-[#708090] mb-4">Nombre</h4>
-                    
-                    <div class="bg-[#F1F0F5] py-4 rounded-lg border-y-2 border-white shadow-inner">
-                        <p class="text-stone-500 text-[10px] uppercase tracking-[0.2em] mb-1">Pases Reservados</p>
-                        <span id="guest-passes" class="text-6xl font-elegant text-[#5a6a7a] drop-shadow-sm">0</span>
-                        <p class="text-[#708090] text-xs font-bold uppercase tracking-widest mt-1">Personas</p>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="https://forms.gle/TsUZeWUBMciTsoZS7" 
-                        target="_blank"
-                        class="inline-block bg-[#708090] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-[#5a6a7a] transition-all shadow-md text-sm">
-                        Confirmar Asistencia
-                        </a>
-                    </div>
-
-                    <p class="mt-4 text-[10px] text-stone-400 uppercase tracking-widest italic">
-                        Favor de confirmar antes del 28 de Febrero
-                    </p>
-                </div>
-            </div>           
-             <!--<p class="mt-6 text-xs text-stone-400 uppercase tracking-widest">Favor de confirmar antes del 28 de Febrero</p>-->
-        </div>
-    </div>
-</section>
+    </section>
 
     <section class="py-20 px-4 bg-transparent">
         <div class="max-w-6xl mx-auto text-center mb-12">
