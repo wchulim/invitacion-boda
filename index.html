@@ -2,26 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Boda de Gabriel & Nayeli 💍</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         .font-elegant { font-family: 'Great Vibes', cursive; }
         .font-main { font-family: 'Montserrat', sans-serif; }
+        .ticket-shape {
+            background-color: white;
+            background-image: radial-gradient(circle at 0 50%, transparent 15px, white 16px), 
+                            radial-gradient(circle at 100% 50%, transparent 15px, white 16px);
+            background-size: 100% 100%;
+            position: relative;
+            border: 1px dashed #708090;
+            border-radius: 15px;
+        }
+        /* Evita que cualquier cosa se salga de la pantalla hacia los lados */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Asegura que el ticket y otros bloques no rompan el ancho */
+        section, div {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body class="bg-[#F1F0F5] text-stone-900 font-main">
     <audio id="musicaBoda" src="imagenes/musica.mp3" loop prealod="auto"></audio>
     <div id="envelope-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-stone-200 transition-transform duration-1000 ease-in-out">
-        <div class="relative w-[90%] max-w-md aspect-[4/3] bg-white shadow-2xl rounded-sm flex flex-center items-center justify-center border-t-8 border-stone-300">
-        
+        <div class="relative w-[90%] max-w-md aspect-[4/3] bg-white shadow-2xl rounded-sm flex items-center justify-center border-t-8 border-stone-300">
+            
             <div class="text-center p-8">
-                <h2 class="font-elegant text-4xl mb-2 text-stone-600">Para nuestra familia y amigos</h2>
+                <div id="envelope-name-container" class="hidden mb-4">
+                    <p class="font-elegant text-3xl text-[#708090] border-b border-stone-100 pb-2">
+                        Para: <span id="guest-name-envelope"></span>
+                    </p>
+                </div>
+
+                <h2 class="font-elegant text-4xl mb-2 text-stone-600">Invitación</h2>
                 <p class="font-main text-xs tracking-widest uppercase text-stone-400">Toca el sello para abrir</p>
                 
                 <button onclick="openEnvelope()" class="mt-8 w-20 h-20 bg-red-800 rounded-full shadow-lg border-4 border-red-900 flex items-center justify-center text-white text-3xl hover:scale-110 transition-transform cursor-pointer">
-                💍
+                    💍
                 </button>
             </div>
         </div>
@@ -170,17 +197,35 @@
         <div class="bg-stone-800 text-white p-12 rounded-3xl shadow-xl text-center transform hover:scale-[1.02] transition-transform duration-300">
             <h3 class="text-4xl font-elegant mb-4">¿Nos acompañas?</h3>
             <p class="mb-8 text-stone-300 tracking-wide">Para nosotros es muy importante contar con tu presencia.</p>
-            <div id="pases-container" class="hidden bg-white/50 p-6 rounded-2xl mb-8 border-dashed border-2 border-[#708090]/30 shadow-sm">
-                <p class="text-stone-600 font-main">
-                    ¡Hola <span id="guest-name" class="font-bold text-[#708090] text-xl"></span>! <br>
-                    Hemos reservado <span id="guest-passes" class="text-2xl font-bold text-[#708090]"></span> pases en tu honor.
-                </p>
-            </div>
-            <a href="https://forms.gle/TsUZeWUBMciTsoZS7" 
-                class="inline-block bg-[#708090] text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-[#5a6a7a] transition-all shadow-lg">
-                Confirmar Asistencia
-            </a>
-            <p class="mt-6 text-xs text-stone-400 uppercase tracking-widest">Favor de confirmar antes del 20 de Febrero</p>
+            <div id="pases-container" class="hidden w-full max-w-[90%] md:max-w-sm mx-auto my-16 transition-all duration-500">
+                <div class="ticket-shape p-6 md:p-8 shadow-xl text-center border-2 border-[#708090]/20">
+                    
+                    <div class="text-[#708090] text-2xl mb-2 font-elegant">G & N</div>
+                    <div class="w-full border-b border-stone-100 mb-4"></div>
+                    
+                    <p class="font-main text-stone-500 text-sm uppercase tracking-widest mb-1">Invitado Especial</p>
+                    <h4 id="guest-name" class="font-elegant text-4xl text-[#708090] mb-4">Nombre</h4>
+                    
+                    <div class="bg-[#F1F0F5] py-4 rounded-lg border-y-2 border-white shadow-inner">
+                        <p class="text-stone-500 text-[10px] uppercase tracking-[0.2em] mb-1">Pases Reservados</p>
+                        <span id="guest-passes" class="text-6xl font-elegant text-[#5a6a7a] drop-shadow-sm">0</span>
+                        <p class="text-[#708090] text-xs font-bold uppercase tracking-widest mt-1">Personas</p>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://forms.gle/TsUZeWUBMciTsoZS7" 
+                        target="_blank"
+                        class="inline-block bg-[#708090] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-[#5a6a7a] transition-all shadow-md text-sm">
+                        Confirmar Asistencia
+                        </a>
+                    </div>
+
+                    <p class="mt-4 text-[10px] text-stone-400 uppercase tracking-widest italic">
+                        Favor de confirmar antes del 28 de Febrero
+                    </p>
+                </div>
+            </div>           
+             <!--<p class="mt-6 text-xs text-stone-400 uppercase tracking-widest">Favor de confirmar antes del 28 de Febrero</p>-->
         </div>
     </div>
 </section>
@@ -218,7 +263,7 @@
     </section>
 
     <footer class="py-20 bg-stone-900 text-white text-center">
-        <h2 class="font-elegant text-5xl text-center mb-8">¡Te esperamos!</h2>
+        <h2 class="font-elegant text-5xl text-center mb-8">¡Te esperamos!, Comparte tus fotos con nosotros</h2>
         <div id="countdown" class="flex justify-center gap-6 mb-12 text-2xl font-bold tracking-widest uppercase">
             </div>
         <div class="flex flex-wrap justify-center gap-4">
@@ -234,8 +279,18 @@
             const nombre = urlParams.get('n');
             const pases = urlParams.get('p');
 
-            if (nombre && pases) {
-                document.getElementById('guest-name').innerText = nombre;
+            if (nombre) {
+                // Pone el nombre en el sobre
+                document.getElementById('guest-name-envelope').innerText = nombre;
+                document.getElementById('envelope-name-container').classList.remove('hidden');
+                
+                // Pone el nombre en el ticket (dentro de la invitación)
+                if (document.getElementById('guest-name')) {
+                    document.getElementById('guest-name').innerText = nombre;
+                }
+            }
+
+            if (pases && document.getElementById('guest-passes')) {
                 document.getElementById('guest-passes').innerText = pases;
                 document.getElementById('pases-container').classList.remove('hidden');
             }
